@@ -7,11 +7,12 @@ timeoutInSeconds: 600
 shell: bash
 
 steps:
-
   - type: Command
     name: "Build Stage"
     command: |
       echo "Building project..."
+      mkdir output
+      echo "<h1>Hello OCI</h1>" > output/index.html
 
   - type: Command
     name: "Test Stage"
@@ -26,4 +27,4 @@ steps:
 outputArtifacts:
   - name: website
     type: BINARY
-    location: .
+    location: output
