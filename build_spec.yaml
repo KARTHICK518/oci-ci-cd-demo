@@ -7,12 +7,4 @@ shell: bash
 steps:
   - type: Command
     name: Build
-    command: |
-      echo "Hello OCI"
-      mkdir output
-      echo "sample" > output/test.txt
-
-outputArtifacts:
-  - name: website
-    type: BINARY
-    location: output
+    command: echo "OCI Test"
