@@ -8,24 +8,24 @@ shell: bash
 
 steps:
   - type: Command
-    name: "Build Stage"
+    name: Build Stage
     command: |
       echo "Building project..."
       mkdir -p output
       echo "<h1>Hello OCI</h1>" > output/index.html
-      ls -l output   # 👈 IMPORTANT (debug)
+      ls -l output
 
   - type: Command
-    name: "Test Stage"
+    name: Test Stage
     command: |
       echo "Running tests..."
 
   - type: Command
-    name: "Deploy Stage"
+    name: Deploy Stage
     command: |
       echo "Deploy step executed"
 
 outputArtifacts:
   - name: website
     type: BINARY
-    location: output/
+    location: output
